@@ -1,7 +1,12 @@
 const { withSentryConfig } = require('@sentry/nextjs');
 
 const moduleExports = {
-  poweredByHeader: false
+  poweredByHeader: false,
+
+  eslint: {
+    // ESlint is run outside of the build step
+    ignoreDuringBuilds: true,
+  },
 };
 
 const SentryWebpackPluginOptions = {
